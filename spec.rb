@@ -29,3 +29,11 @@ describe Ear do
     subject.whisper thing_heard
   end
 end
+
+describe Mouth do
+  let(:said) { "thing i think #{rand(1000).to_s}" }
+  it 'connects the brain to the voices' do
+    allow(Kernel).to receive(:gets).and_return(said)
+    expect(subject.listen).to eq said
+  end
+end
