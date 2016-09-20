@@ -8,7 +8,7 @@ class MagicBox
   def poke
     @ear.whisper 'tell me a secret'
     secret = @mouth.listen
-    @ear.whisper "#{secret} FART"
+    @ear.whisper "#{secret.strip} ... FART"
   end
 end
 
