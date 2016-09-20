@@ -20,3 +20,12 @@ describe MagicBox do
   end
 
 end
+
+describe Ear do
+  let(:thing_heard) { "my fav # is #{rand(1000).to_s}" }
+  subject { described_class.new }
+  it 'connects voices to the brain' do
+    expect(Kernel).to receive(:puts).with(thing_heard)
+    subject.whisper thing_heard
+  end
+end
