@@ -17,3 +17,9 @@ class Ear
     Kernel.puts heard
   end
 end
+
+class Mouth
+  def listen
+    Kernel.gets
+  end
+end
