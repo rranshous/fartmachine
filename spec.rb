@@ -16,6 +16,7 @@ describe MagicBox do
 
   it 'is rude to you' do
     expect(ear).to receive(:whisper).with("#{response} FART")
+    subject.poke
   end
 
 end
