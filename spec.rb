@@ -6,7 +6,7 @@ describe MagicBox do
 
   let(:ear) { double("ear", whisper: nil) }
   let(:mouth) { double("mouth", listen: response) }
-  let(:response) { 'i like making friends' }
+  let(:response) { "i like making friends\n" }
   subject { described_class.new(ear, mouth) }
 
   it 'asks you for a secret' do
@@ -15,7 +15,7 @@ describe MagicBox do
   end
 
   it 'is rude to you' do
-    expect(ear).to receive(:whisper).with("#{response} FART")
+    expect(ear).to receive(:whisper).with("#{response.strip} ... FART")
     subject.poke
   end
 
