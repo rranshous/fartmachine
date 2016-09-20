@@ -23,3 +23,8 @@ class Mouth
     Kernel.gets
   end
 end
+
+if __FILE__ == $0
+  box = MagicBox.new(Ear.new, Mouth.new)
+  box.poke
+end
