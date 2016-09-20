@@ -11,3 +11,9 @@ class MagicBox
     @ear.whisper "#{secret} FART"
   end
 end
+
+class Ear
+  def whisper heard
+    Kernel.puts heard
+  end
+end
